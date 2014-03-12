@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/*全局*/
+body {
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+	line-height: 18px;
+	width: 1278px;
+	height: 4198px;
+	padding-bottom: 12px;
+}
+a{
+	color: #666666;
+}
+a:link{
+	text-decoration: none;
+	
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #ff6600;
+}
+
+ul,li{
+	list-style: none;
+}
+
+#side_content{
+	float: left;
+	width: 264px;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 22px;
+	border-left: 1px solid #f2f2f2;
+}
+#side_content li{
+	width: 264px;
+	height: 214px;
+	border-bottom: 1px solid #f2f2f2;	
+}
+.hd{
+	width: 264px;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+
+}
+.hd strong{
+	color: #076FA2;
+	float: left;
+}
+.hd img{
+	width: 26px;
+	height: 26px;
+	float: left;
+	margin-left:-36px;
+}
+.txt{
+	margin: 0 0;
+}
+.pic{
+	width: 276px;
+	height: 90px;
+	margin: 0 0 10px 0;
+}
+.pic img{
+	width: 80px;
+	height: 80px;
+	margin-right: 12px;
+	margin-top: 10px;
+	float: left;
+}
+.ft_l{
+	float: left;
+}
+.ft_r{
+	float: right;
+	margin-right: 8px;
+}
+.ft_r a{
+	color: #076FA2;
+}
+.ft_r a:hover{
+	text-decoration: underline;
+	color: #ff6600;
+}
+.pipe{
+	padding: 0 10px;
+	font-style: normal;
+	color: #ccc;
+}

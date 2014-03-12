@@ -1,0 +1,2608 @@
+<!doctype html> 
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>淘宝网 - 淘！我喜欢</title>
+	<link rel="stylesheet" type="text/css" href="taobao.css">
+	<script src="taobao.js"></script>
+</head>
+<body>
+	<div id="siteNav">
+		<div id="siteNav_bar" class="main">
+			<p id="phone" class="siteNav_left">
+				<a href="#">手机版</a>
+			</p>
+			<p id="userName" class="siteNav_left" onmouseover="getMenu(this.id)"  onmouseout="lostMenu()">
+				<span id="user_name">
+					<a id="name"href="#">idshadow</a>
+					<b></b>
+				</span>
+				<span id="user_info" class="siteNav_hidden ">
+					<img src="images/avatar-80.png" alt="pic"/>
+					<span id="management">
+						<a id="account" href="#">账号管理</a>
+						<a id="exit" href="#">退出</a>
+					</span>
+					<span id="privilege">
+						<a id="privilege_pic" href="#"></a>
+						<a id="privilege_view" href="#">查看我的会员特权</a>
+						<a id="privilege_grouUp" href="#">我的成长</a>
+					</span>
+					<span id="user_privilege">
+						<span id="user_privilege_ico">
+							<a>
+								<img src="images/T1jZWxXzpeXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1MUYmXkFsXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1glbnXcRkXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1GdSxXsxfXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1MUYmXkFsXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1HJGxXpRgXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T13gylXr4hXXXCWhje-36-36.png"/>
+							</a>
+							<a>
+								<img src="images/T1jN_mXhFtXXXCWhje-36-36.png"/>
+							</a>
+						</span>
+					</span>
+					<span class="privilege_step">
+						    <a href="#" onclick="stepLeft()">
+						    	<s class="privilege_arrow privilege_arrow_l">
+						    		<s></s>
+						    	</s>
+						    </a>
+						     <a href="#" onclick="stepRight()">
+							     <s class="privilege_arrow privilege_arrow_r">
+							     	<s></s>
+							     </s>
+						     </a>
+					</span>	
+				</span>
+			</p>
+			<p id="msg" class="siteNav_left" onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+				<span id="msg_push">
+					<a></a>
+					<b></b>
+				</span>
+				<span id="msg_content" class="siteNav_hidden">
+
+				</span>
+			</p>
+			<p id="vip" class="siteNav_left" href="#">
+				<a></a>
+			</p>
+			<ul id="siteNav_right">
+				<li id="siteNav_visit" class="siteNav_menu_3w"  onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+					<span >
+						<a href="#">我要逛</a>
+						<b></b>
+					</span>
+					<span id="siteNav_visit_item" class="siteNav_hidden">
+					</span>
+				</li>
+				<li id="siteNav_myTaobao" class="siteNav_menu_4w" onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+					<span>
+						<a href="#">我的淘宝</a>
+						<b></b>
+					</span>
+					<span id="siteNav_myTaobao_item" class="siteNav_hidden">
+					</span>
+				</li>
+				<li id="siteNav_seller" class="siteNav_menu_4w" onmouseover="getMenu(this.id)"  onmouseout="lostMenu()">
+					<span>
+					<a href="#">卖家中心</a>
+					<b></b>
+					</span>
+					<span id="siteNav_seller_item" class="siteNav_hidden">
+					</span>
+				</li>
+				<li class="siteNav_menu_service">
+					<a href="#">联系客服</a>
+				</li>
+				<li id="siteNav_cart" class="siteNav_menu_cart" onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+					<span >
+						<a id="cart_ico"></a>
+						<a href="#">购物车<a id="cart_num">0</a>件</a>
+						<b></b>
+					</span>
+					<span id="siteNav_cart_item" class="siteNav_hidden">
+					</span>
+				</li>
+				<li id="siteNav_favorites" class="siteNav_menu_3w"onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+					<span>
+						<a id="siteNav_favorites_title" href="#">收藏夹</a>
+						<b></b>
+					</span>
+					<span id="siteNav_favorites_item" class="siteNav_hidden">
+					</span>
+				</li>
+				<li id="siteNav_map" class="siteNav_menu_4w" onmouseover="getMenu(this.id)" onmouseout="lostMenu()">
+					<span>
+						<a href="#">网站导航</a>
+						<b></b>
+					</span>
+					<span id="siteNav_map_item" class="siteNav_hidden">
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="header" class="main">
+		<div id="logo">
+			<a><img src="images/T1Kz0pXzJdXXXIdnjb-146-58.png"/></a>
+		</div>
+		<div id="search">
+			<ul id="search_tags">
+				<li class="search_tag search_tag_normal" id="search_tag_commodity" onclick="searchTab(this.id)">
+					<a id="search_tag_normal_a" href="#" >宝贝</a>
+				</li>
+				<li class="search_tag" id="search_tag_tmail" onclick="searchTab(this.id)">
+					<a href="#" >天猫</a>
+				</li>
+				<li class="search_tag" id="search_tag_shop" onclick="searchTab(this.id)">
+					<a href="#" >店铺</a>
+				</li>
+			</ul>
+			<div id="search_box">
+				<form id="search_form">
+					<input type="text" x-webkit-speech onfocus="inputOnfocus()" onblur="inputOnblur()" id="fname"/>
+					<p id="search_p"></p>
+					<button></button>
+				</form>
+				<div id="search_help">
+					<a href="#">高级搜索</a>
+					<a href="#">使用帮助</a>
+				</div>
+			</div>
+			<ul id="search_hot">
+				<li><a href="#">大闸蟹</a></li>
+				<li><a href="#">双肩包</a></li>
+				<li class="search_hot_color"><a href="#">秋装上新</a></li>
+				<li><a href="#">童装新品</a></li>
+				<li><a href="#">帆布鞋</a></li>
+				<li><a href="#">文胸</a></li>
+				<li><a href="#">四件套</a></li>
+				<li><a href="#">月饼</a></li>
+				<li class="search_hot_more"><a href="#">更多</a><li>
+			</ul>
+		</div>
+	</div>
+	<div id="mainNavBar" class="main">
+		<ul id="main_nav">
+			<li id="home"><a href="#">首页</a></li>
+			<li class="other_main_nav"><a href="#">天猫</a></li>
+			<li class="other_main_nav"><a href="#">聚划算</a></li>
+			<li class="other_main_nav"><a href="#">电器城</a></li>
+			<li class="other_main_nav"><a href="#">超市</a></li>
+			<li class="other_main_nav"><a href="#">一淘网</a></li>
+			<li class="other_main_nav"><a href="#">Hitao妆扮</a></li>
+			<li class="other_main_nav"><a href="#">旅行</a></li>
+			<li class="other_main_nav"><a href="#">云手机</a></li>
+			<li class="other_main_nav"><a href="#">特色中国</a></li>
+		</ul>
+		<div id="main_nav_help">
+			<img src="images/T1VMynFmJeXXaokqjm-70-40.gif"/>
+			<a href="#">消费者保障</a>	
+		</div>
+	</div>
+	<div id="content" class="main">
+		<div id="product_background">
+			<div id="product">
+				<div id="product_hd">
+					<h3>淘宝服务</h3>
+					<a href="#">更多</a>
+				</div>
+				<ul id="product_kinds">
+					<li class="product_kind" id="product_shopping">
+						<h4><span class="small_ico" id="product_shopping_ico"></span>购物</h4>
+						<a href="#" class="product_content">司法拍卖</a>
+						<a href="#" class="product_content">淘金币</a>
+						<a href="#" class="product_content">天天特价</a>
+						<a href="#" class="product_content">跳蚤街</a>
+						<a href="#" class="product_content">全球购</a>
+						<a href="#" class="product_content">试用</a>
+						<a href="#" class="product_content">清仓</a>
+					</li>
+					<li class="product_kind" id="product_life">
+						<h4><span class="small_ico" id="product_life_ico"></span>生活</h4>
+						<a href="#" class="product_content">彩票</a>
+						<a href="#" class="product_content">电子书</a>
+						<a href="#" class="product_content">水电煤</a>
+						<a href="#" class="product_content">车险</a>
+						<a href="#" class="product_content">外卖</a>
+						<a href="#" class="product_content">理财</a>
+						<a href="#" class="product_content">电影<img src="images/T1hOy5XhNnXXXXXXXX-9-14.gif"/></a>
+						<a href="#" class="product_content">生活服务<img src="images/T1hOy5XhNnXXXXXXXX-9-14.gif"/></a>
+					</li>
+					<li class="product_kind" id="product_interactive">
+						<h4><span class="small_ico" id="product_interactive_ico"></span>互动</h4>
+						<a href="#" class="product_content">随便逛逛</a>
+						<a href="#" class="product_content">淘女郎</a>
+						<a href="#" class="product_content">U站</a>
+						<a href="#" class="product_content">网友晒家</a>
+						<a href="#" class="product_content">闺蜜淘货</a>
+						<a href="#" class="product_content">值得买</a>
+					</li>
+					<li class="product_kind" id="product_tools">
+						<h4><span class="small_ico" id="product_tools_ico"></span>工具</h4>
+						<a href="#" class="product_content">阿里旺旺</a>
+						<a href="#" class="product_content">支付宝</a>
+						<a href="#" class="product_content">浏览器</a>
+					</li>
+					<li class="product_kind" id="product_other">
+						<h4><span class="small_ico" id="product_other_ico"></span>其它</h4>
+						<a href="#" class="product_content">品牌特卖</a>
+						<a href="#" class="product_content">品牌街</a>
+						<a href="#" class="product_content">品牌团购</a>
+						<a href="#" class="product_content">天猫预售</a>
+						<a href="#" class="product_content">爱腔调</a>
+						<a href="#" class="product_content">特价名品</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="promo">
+			<div id="promo_banner">
+				<ul id="promo_banner_page">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</div>
+			<div id="promo_tmail">
+				<div id="promo_tmail_interlayer">
+					<img src="images/T1VnGpFdBeXXboiz2g-166-35.gif"/>
+					<span class="step">
+					    <a href="#" >
+					    	<s class="arrow arrow_l">
+					    		<s></s>
+					    	</s>
+					    </a>
+					     <a href="#" >
+					     <s class="arrow arrow_r">
+					     	<s></s>
+					     	</s>
+					     </a>
+					</span>
+					<a href="#" id="promo_tmail_text"><strong>品牌特卖</strong><span> 精品童装 47元起包邮</span></a>
+				</div>
+				<div id="promo_tmail_slide">
+					<a id="promo_tmail_leftSlide"></a>	
+					<a id="promo_tmail_rightSlide"></a>
+					<img src="images/T10GqrFk8dXXXRAFgs-110-135.png"/>
+					<img src="images/T1LTyqFkVeXXXRAFgs-110-135.png"/>
+					<img src="images/T1MJitFfVbXXXRAFgs-110-135.png"/>
+					<img src="images/T1RLuuFftXXXXRAFgs-110-135.png"/>
+				</div>
+				<div id="promo_tmail_banner">
+					<img src="images/T2sgjeXjtaXXXXXXXX_!!802987756.jpg"/>
+					<img src="images/T1S6vWXh0cXXXQXDnq-90-45.png"/>
+					<img src="images/T10MrUXiNaXXXQXDnq-90-45.png"/>
+					<img src="images/T11DPUXllXXXXQXDnq-90-45.png"/>
+					<img src="images/T1Eo.QXo0dXXXQXDnq-90-45.png"/>
+				</div>
+			</div>
+		</div>
+		<div id="col_sub">
+			<div id="notice">
+				<div class="tab_hd">
+					<ul id="notice_tab_nav" class="tab_nav">
+						<li class="notice_tab_nav_hover"><a href="#">公告</a></li>
+						<li id="nav1"><a href="#">规则</a></li>
+						<li><a href="#">论坛</a></li>
+						<li><a href="#">安全中心</a></li>
+						<li><a href="#">公益</a></li>
+					</ul>
+				</div>
+				<ul class="notice_tab_bd">
+					<li><a href="#" id="tab_bd_hover">手机淘宝新增上亿用户</a></li>
+					<li><a href="#">广州网货会25日开幕</a></li>
+					<li><a href="#">六个故事，万分感动！</a></li>
+					<li><a href="#">阿里推移动社交“来往”</a></li>
+				</ul>
+			</div>
+			<div id="status">
+				<a id="status_regist"></a>
+				<a id="status_login"></a>
+				<a id="status_freeOpen"></a>
+			</div>
+			<div id="convenience">
+				<div class="tab_hd" id="convenience_tab">
+					<h4>便民服务</h4>
+					<ul id="convenience_tab_nav" class="tab_nav">
+						<li class="convenience_tab_nav_hover"><a href="#">充话费</a></li>
+						<li><a href="#">游戏</a></li>
+						<li><a href="#">旅行</a></li>
+						<li><a href="#">保险</a></li>
+						<li><a href="#">电影</a></li>
+					</ul>
+				</div>
+				<form id="convenience_tab_bd">
+					<div class="convenience_group">
+						<label for="phone_number_input">号码</lable>
+						<input type="tel" class="convenience_input" id="phone_number_input">
+						<span id="convenience_phone"></span>
+					</div>
+					<div class="convenience_group">
+						<label for="convenience_denom_input">面值</lable>
+						<input type="tel" class="convenience_input" id="pconvenience_denom_input">
+						<span id="convenience_denom"></span>
+					</div>
+					<p id="convenience_result">售价<span>¥</span>
+					<strong>49-49.8</strong></p>
+					<div id="convenience_button">
+						<button id="convenience_button_now" class="button">立即充值</button>
+						<button id="convenience_button_ontime"class="button">定期充值</button>
+						<a href="#">查看我的充值账单</a>
+					</div>
+				</form>
+			</div>
+			<img src="images/T1Hkt0FiVhXXXoz22F-298-52.png"/>
+		</div>
+	</div>
+	<div id="category" class="main">
+		<div id="all_category">
+			<div id="theme_hot">
+				<ul id="theme_hd">
+					<li>
+						<h3>主题市场：</h3>
+						<ul class="theme_bd">
+							<li><a href="#">店铺上新</a></li>
+							<li><a href="#">积分购物</a></li>
+							<li><a href="#">明星开店</a></li>
+							<li><a href="#">淘代购</a></li>
+							<li><a href="#">手机大全</a></li>
+							<li><a href="#">虾米音乐</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>特色购物：</h3>
+						<ul class="theme_bd">
+							<li><a href="#">中老年女装</a></li>
+							<li><a href="#">大码女装</a></li>
+							<li><a href="#">婚纱礼服</a></li>
+							<li><a href="#">买房租房</a></li>
+							<li><a href="#">创意站</a></li>
+							<li><a href="#">天猫超市</a></li>
+							<li><a href="#">全球美食</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div id="theme_pic"><img src="images/T1xq9oFhhgXXXzaXk8-120-55.png
+				"/></div>
+			</div>
+			<div id="category_bd">
+				<ul id="category_bd_left">
+					<li class="category_bd_li_left category_bd_li_topLeft">
+						<h4 id="l1" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">网上营业厅</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">0元送</a></li>
+									<li><a href="#">号码</a></li>
+									<li><a href="#">3G上网</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">话费充值</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">移动</a></li>
+									<li><a href="#">联通</a></li>
+									<li><a class="yellow" href="#">电信</a></li>
+									<li><a href="#">定期充</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">彩票</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">双色球</a></li>
+									<li><a href="#">联通</a></li>
+									<li><a href="#">电信</a></li>
+									<li><a class="yellow" href="#">定期充</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">游戏</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">DNF</a></li>
+									<li><a href="#">魔兽</a></li>
+									<li><a href="#">天龙八部</a></li>
+									<li><a class="yellow" href="#">九阴</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">点卡</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">魔兽</a></li>
+									<li><a href="#">CF</a></li>
+									<li><a href="#">传奇</a></li>
+									<li><a class="yellow" href="#">QQ</a></li>
+									<li><a href="#">网页游戏</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li">
+								<h5><a href="#">机票</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">酒店</a></li>
+									<li><a href="#">客栈</a></li>
+									<li><a class="yellow" href="#">旅游</a></li>
+									<li><a href="#">门票</a></li>
+									<li><a href="#">国际票</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1Xk4CFkVfXXX9hhfo-80-80.jpg"/>
+					    	<span>
+						    	<a href="#">100淘金币兑换28.8元</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left">
+						<h4 id="l2" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">女鞋</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">新品</a></li>
+									<li><a href="#">凉鞋</a></li>
+									<li><a href="#">拖鞋</a></li>
+									<li><a href="#">单鞋</a></li>
+									<li><a href="#">帆布鞋</a></li>
+								</ul>
+
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">男鞋</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">休闲</a></li>
+									<li><a hclass="yellow" ref="#">潮鞋</a></li>
+									<li><a href="#">帆布鞋</a></li>
+									<li><a href="#">板鞋</a></li>
+									<li><a href="#">皮鞋</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">配饰</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">夏遮阳</a></li>
+									<li><a class="yellow" href="#">腰带</a></li>
+									<li><a href="#">帽子</a></li>
+									<li><a href="#">丝袜</a></li>
+									<li><a href="#">手套</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">女包</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">新品</a></li>
+									<li><a href="#">真皮</a></li>
+									<li><a href="#">大牌</a></li>
+									<li><a href="#">单肩</a></li>
+									<li><a href="#">钱包</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">男包</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">单肩</a></li>
+									<li><a class="yellow" href="#">钱包</a></li>
+									<li><a href="#">手提</a></li>
+									<li><a href="#">休闲</a></li>
+									<li><a href="#">真皮</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">旅行箱包</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">双肩</a></li>
+									<li><a class="yellow" href="#">旅行箱</a></li>
+									<li><a href="#">包</a></li>
+									<li><a href="#">登机</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1HtytFhlhXXaCwpjX.png"/>
+					    	<span>
+						    	<a href="#">超美秋鞋，重磅新发！</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left">
+						<h4 id="l3" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">珠宝</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">钻石</a></li>
+									<li><a href="#">黄金</a></li>
+									<li><a href="#">铂金</a></li>
+									<li><a href="#">施华洛</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">翡翠</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">珍珠</a></li>
+									<li><a href="#">琥珀</a></li>
+									<li><a href="#">珊瑚</a></li>
+									<li><a href="#">宝石</a></li>
+									<li><a class="yellow" href="#">碧玺</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">饰品</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">项链</a></li>
+									<li><a href="#">手链</a></li>
+									<li><a href="#">发饰</a></li>
+									<li><a href="#">耳饰</a></li>
+									<li><a href="#">手镯</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">品牌手表</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">卡西欧</a></li>
+									<li><a href="#">天梭</a></li>
+									<li><a class="yellow" href="#">浪琴</a></li>
+									<li><a href="#">海鸥</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">时装表</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">果冻表</a></li>
+									<li><a href="#">水钻表</a></li>
+									<li><a href="#">复古表</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">眼镜</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">太阳镜</a></li>
+									<li><a href="#">眼镜框</a></li>
+									<li><a href="#">3D眼镜</a></li>
+									<li><a href="#">zippo</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1CcmwFa8dXXX9hhfo-80-80.jpg"/>
+					    	<span>
+						    	<a href="#">天然琥珀金绞蜜蜡手链</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left">
+						<h4 id="l4" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">小家电</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">净水器</a></li>
+									<li><a class="yellow" href="#">冰淇淋机</a></li>
+									<li><a href="#">电风扇</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">烟灶消</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">电视机</a></li>
+									<li><a href="#">空调</a></li>
+									<li><a href="#">冰箱</a></li>
+									<li><a href="#">洗衣机</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">视听</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">耳机</a></li>
+									<li><a class="yellow" href="#">家庭影院</a></li>
+									<li><a href="#">音响</a></li>
+									<li><a href="#">播放器</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">厨电</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">饭煲</a></li>
+									<li><a href="#">豆浆机</a></li>
+									<li><a href="#">榨汁机</a></li>
+									<li><a class="yellow" href="#">油烟机</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">个人护理</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">剃须刀</a></li>
+									<li><a href="#">空气净化</a></li>
+									<li><a class="yellow" href="#">按摩器</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">办公</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">微投影</a></li>
+									<li><a href="#">3D打印</a></li>
+									<li><a href="#">高清</a></li>
+									<li><a href="#">保险柜</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1RtOsFiRfXXb1upjX.jpg"/>
+					    	<span>
+						    	<a href="#">蒸脸机 秋季补水秘籍</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left">
+						<h4 id="l5" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">奶粉</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">奶粉</a></li>
+									<li><a class="yellow" href="#">钙锌</a></li>
+									<li><a href="#">鱼油</a></li>
+									<li><a href="#">辅食</a></li>
+									<li><a class="yellow" href="#">果泥</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">用品</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">尿裤</a></li>
+									<li><a href="#">推车</a></li>
+									<li><a href="#">沐浴</a></li>
+									<li><a href="#">防蚊</a></li>
+									<li><a class="yellow" href="#">湿巾</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">玩乐</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">积木</a></li>
+									<li><a href="#">童车</a></li>
+									<li><a class="yellow" href="#">垫子</a></li>
+									<li><a href="#">游泳</a></li>
+									<li><a href="#">早教</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">孕产</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">孕装</a></li>
+									<li><a href="#">孕裤</a></li>
+									<li><a href="#">吸奶</a></li>
+									<li><a class="yellow" href="#">文胸</a></li>
+									<li><a href="#">包</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">新生儿</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">礼盒</a></li>
+									<li><a href="#">童床</a></li>
+									<li><a href="#">餐椅</a></li>
+									<li><a class="yellow" href="#">抱毯</a></li>
+									<li><a href="#">消毒</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">婴童装</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">爬服</a></li>
+									<li><a href="#">内衣</a></li>
+									<li><a href="#">亲子</a></li>
+									<li><a class="yellow" href="#">罩衣</a></li>
+									<li><a href="#">童鞋</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1IkXTFf4gXXX9hhfo-80-80.jpg"/>
+					    	<span>
+						    	<a href="#">寻找暑假最happy小伙伴</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left">
+						<h4 id="l6" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">特产</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">恩施</a></li>
+									<li><a href="#">高淳</a></li>
+									<li><a href="#">龙游</a></li>
+									<li><a class="yellow" href="#">安徽</a></li>
+									<li><a href="#">印江</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">进口</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">巧克力</a></li>
+									<li><a class="yellow" href="#">饼干</a></li>
+									<li><a href="#">牛奶</a></li>
+									<li><a href="#">糖果</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">零食冲饮</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">月饼</a></li>
+									<li><a href="#">下午茶</a></li>
+									<li><a href="#">布丁</a></li>
+									<li><a href="#">咖啡</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">生鲜</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">蛋糕</a></li>
+									<li><a href="#">烧烤</a></li>
+									<li><a href="#">方便面</a></li>
+									<li><a href="#">大闸蟹</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">保健</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">美白</a></li>
+									<li><a href="#">维生素</a></li>
+									<li><a href="#">排毒</a></li>
+									<li><a href="#">抗衰</a></li>
+									<li><a class="yellow" href="#">养生</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">茶叶</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">咖啡</a></li>
+									<li><a href="#">铁观音</a></li>
+									<li><a href="#">酸梅</a></li>
+									<li><a class="yellow" href="#">啤酒</a></li>
+									<li><a href="#">红酒</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1qxisFXXdXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">洋气烘焙大赛 全场包邮！</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left category_culture">
+						<h4 id="l7" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">图书</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">小说</a></li>
+									<li><a class="yellow" href="#">励志</a></li>
+									<li><a href="#">言情</a></li>
+									<li><a href="#">抽奖无上限</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">文具</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">日韩</a></li>
+									<li><a href="#">日记本</a></li>
+									<li><a href="#">白板</a></li>
+									<li><a href="#">激光笔</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">乐器</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">吉他</a></li>
+									<li><a href="#">钢琴</a></li>
+									<li><a href="#">音像</a></li>
+									<li><a href="#">减肥</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li">
+								<h5><a href="#">网服</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">翻译</a></li>
+									<li><a href="#">代购</a></li>
+									<li><a href="#">图片处理</a></li>
+									<li><a class="yellow" href="#">装修设计</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T10dOuFmheXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">每天登入免费送抽奖</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_left category_bd_li_bottomLeft">
+						<h4 id="l8" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">定制</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">洗照片</a></li>
+									<li><a class="yellow" href="#">纯手工</a></li>
+									<li><a href="#">发现</a></li>
+									<li><a href="#">创意</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">玩具</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">模型</a></li>
+									<li><a href="#">卑鄙的我</a></li>
+									<li><a href="#">DIY</a></li>
+									<li><a class="yellow" href="#">怪兽大学</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">收藏</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">玉石</a></li>
+									<li><a href="#">宗教</a></li>
+									<li><a href="#">手工艺</a></li>
+									<li><a class="yellow" href="#">趣味收藏</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">宠物</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">狗狗</a></li>
+									<li><a href="#">猫咪</a></li>
+									<li><a href="#">鱼缸</a></li>
+									<li><a class="yellow" href="#">奇宠</a></li>
+									<li><a href="#">分享</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">鲜花</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">玫瑰</a></li>
+									<li><a href="#">向日葵</a></li>
+									<li><a href="#">保鲜花</a></li>
+									<li><a href="#">家饰</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">绿植园艺</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">驱蚊草</a></li>
+									<li><a href="#">菜园</a></li>
+									<li><a href="#">多肉</a></li>
+									<li><a href="#">工具</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1Vcn_Xe0gXXa2.NwW_023636.jpg_80x80.jpg"/>
+					    	<span>
+						    	<a href="#">DIY个梦想的家</a>
+						    </span>
+					    </div>
+					</li>
+				</ul>
+				<ul id="category_bd_right">
+					<li class="category_bd_li_right category_bd_li_topRight">
+						<h4 id="r1" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">女装</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">连衣裙</a></li>
+									<li><a class="yellow" href="#">新品</a></li>
+									<li><a href="#">半裙</a></li>
+									<li><a href="#">裤子</a></li>
+									<li><a href="#">T恤</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">原创设计</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">雪纺衫</a></li>
+									<li><a href="#">牛仔</a></li>
+									<li><a class="yellow" href="#">蕾丝</a></li>
+									<li><a href="#">衬衫</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">男装</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">T恤</a></li>
+									<li><a href="#">衬衫</a></li>
+									<li><a href="#">牛仔裤</a></li>
+									<li><a href="#">薄西装</a></li>
+									<li><a href="#">夹克</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">秋装</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">把妹</a></li>
+									<li><a href="#">外套</a></li>
+									<li><a href="#">休闲裤</a></li>
+									<li><a href="#">针织衫</a></li>
+									<li><a href="#">潮流</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">内衣</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">文胸</a></li>
+									<li><a href="#">睡衣</a></li>
+									<li><a href="#">内裤</a></li>
+									<li><a href="#">袜子</a></li>
+									<li><a href="#">基础款</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">童装</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">童鞋</a></li>
+									<li><a class="yellow" href="#">套装</a></li>
+									<li><a href="#">裙子</a></li>
+									<li><a href="#">裤子</a></li>
+									<li><a href="#">T恤</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T19givFXFdXXX9hhfo-80-80.jpg"/>
+					    	<span>
+						    	<a href="#">潮品集结地，要潮你就来</a>
+						    </span>
+					    </div>
+						<div>
+					</li>
+					<li class="category_bd_li_right">
+						<h4 id="r2" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">运动鞋</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">跑步</a></li>
+									<li><a class="yellow" href="#">板鞋</a></li>
+									<li><a href="#">篮球</a></li>
+									<li><a href="#">帆布</a></li>
+									<li><a href="#">开学季</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">运动服</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">套装</a></li>
+									<li><a href="#">裤子</a></li>
+									<li><a href="#">POLO衫</a></li>
+									<li><a class="yellow" href="#">T桖</a></li>
+									<li><a href="#">卫衣</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">纤体健身</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">死飞</a></li>
+									<li><a href="#">泳衣</a></li>
+									<li><a class="yellow" href="#">跑步机</a></li>
+									<li><a href="#">舞蹈</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">屋外</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">服饰</a></li>
+									<li><a href="#">钓鱼</a></li>
+									<li><a href="#">凉鞋</a></li>
+									<li><a class="yellow" href="#">照明</a></li>
+									<li><a href="#">速干衣</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">包配</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">单肩</a></li>
+									<li><a href="#">双肩</a></li>
+									<li><a href="#">军迷</a></li>
+									<li><a href="#">旅行</a></li>
+									<li><a href="#">腰包配</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">品牌</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">耐克</a></li>
+									<li><a href="#">阿迪</a></li>
+									<li><a href="#">特步</a></li>
+									<li><a href="#">李宁</a></li>
+									<li><a href="#">川崎</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1XS9tFnpgXXX9hhfo-80-80.jpg"/>
+					    	<span>
+						    	<a href="#">免费装备，组队来拿！</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right">
+						<h4 id="r3" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">手机</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">iPhone</a></li>
+									<li><a href="#">三星</a></li>
+									<li><a class="yellow" href="#">HTC</a></li>
+									<li><a href="#">华为</a></li>
+									<li><a href="#">小米</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">相机</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">卡片机</a></li>
+									<li><a class="yellow" href="#">单反</a></li>
+									<li><a href="#">佳能</a></li>
+									<li><a href="#">尼康</a></li>
+									<li><a href="#">索尼</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">笔记本</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">超极本</a></li>
+									<li><a href="#">联想</a></li>
+									<li><a href="#">华硕</a></li>
+									<li><a class="yellow" href="#">戴尔</a></li>
+									<li><a href="#">苹果</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">平板</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">三星</a></li>
+									<li><a href="#">iPadmini</a></li>
+									<li><a href="#">新nexus7</a></li>
+									<li><a class="yellow" href="#">iPad4</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">电脑</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">游戏DIY</a></li>
+									<li><a href="#">键鼠</a></li>
+									<li><a href="#">显示器</a></li>
+									<li><a href="#">CPU</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">配件</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">贴膜</a></li>
+									<li><a href="#">保护套</a></li>
+									<li><ac lass="yellow" href="#">蓝牙</a></li>
+									<li><a href="#">移动电源</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1r3CXFlXgXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">触控开学季<br>超极本百元购</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right">
+						<h4 id="r4" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">护肤</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">洁面</a></li>
+									<li><a class="yellow" href="#">爽肤</a></li>
+									<li><a href="#">面膜</a></li>
+									<li><a href="#">防晒</a></li>
+									<li><a href="#">眼霜</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">彩妆</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">香水</a></li>
+									<li><a href="#">BB霜</a></li>
+									<li><a href="#">唇膏</a></li>
+									<li><a href="#">眼线</a></li>
+									<li><a class="yellow" href="#">粉饼</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">美体美甲</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">身体乳</a></li>
+									<li><a class="yellow" href="#">丰胸</a></li>
+									<li><a href="#">瘦身</a></li>
+									<li><a href="#">美甲</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">功效</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">美白</a></li>
+									<li><a href="#">控油</a></li>
+									<li><a href="#">祛斑</a></li>
+									<li><a href="#">保湿</a></li>
+									<li><a class="yellow" href="#">抗敏</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">品牌</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">兰蔻</a></li>
+									<li><a href="#">欧莱雅</a></li>
+									<li><a href="#">玉兰油</a></li>
+									<li><a href="#">水宝宝</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">热卖</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">脱毛</a></li>
+									<li><a href="#">卸妆</a></li>
+									<li><a href="#">精油</a></li>
+									<li><a href="#">隔离</a></li>
+									<li><a class="yellow" href="#">口红</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1Y3esFdxeXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">肌肤问题？找顾问！</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right">
+						<h4 id="r5" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">家具</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">三包到家</a></li>
+									<li><a href="#">床</a></li>
+									<li><a href="#">沙发</a></li>
+									<li><a href="#">衣柜</a></li>
+									<li><a href="#">电视柜</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">家纺</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">四件套</a></li>
+									<li><a class="yellow" href="#">餐桌</a></li>
+									<li><a href="#">架</a></li>
+									<li><a href="#">懒人沙发</a></li>
+									<li><a href="#">茶几</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">家饰</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">5折起</a></li>
+									<li><a href="#">摆件</a></li>
+									<li><a href="#">十字绣</a></li>
+									<li><a href="#">窗帘</a></li>
+									<li><a href="#">墙贴</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">建材</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">灯饰</a></li>
+									<li><a href="#">包送货</a></li>
+									<li><a href="#">卫浴</a></li>
+									<li><a href="#">墙纸</a></li>
+									<li><a class="yellow" href="#">瓷砖</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">样板间</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">设计</a></li>
+									<li><a href="#">新房装修</a></li>
+									<li><a href="#">小户型</a></li>
+									<li><a href="#">简约</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">晒家</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">婚房</a></li>
+									<li><a href="#">小三房</a></li>
+									<li><a href="#">大户型</a></li>
+									<li><a href="#">旧房改造</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1qa5uFnJeXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">90㎡小3房，婚房装修</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right">
+						<h4 id="r6" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">收纳</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">压缩袋</a></li>
+									<li><a href="#">拖把</a></li>
+									<li><a href="#">晾衣架</a></li>
+									<li><a href="#">梳子</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">日用</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">洗发</a></li>
+									<li><a href="#">纸巾</a></li>
+									<li><a href="#">洗衣液</a></li>
+									<li><a href="#">卫生巾</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">应季</a></h5>
+								<ul class="category_bd_item">
+									<li><a class="yellow" href="#">小风扇</a></li>
+									<li><a href="#">冰贴</a></li>
+									<li><a href="#">灭蚊灯</a></li>
+									<li><a href="#">扇子</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">厨房</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">茶具</a></li>
+									<li><a href="#">餐具</a></li>
+									<li><a class="yellow" href="#">杯子</a></li>
+									<li><a href="#">锅</a></li>
+									<li><a href="#">保鲜盒</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">居家</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">防晒伞</a></li>
+									<li><a href="#">创意</a></li>
+									<li><a href="#">婚庆</a></li>
+									<li><a href="#">相册</a></li>
+									<li><a href="#">竹炭</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li ">
+								<h5><a href="#">成人</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">男欢</a></li>
+									<li><a class="yellow" href="#">女爱</a></li>
+									<li><a href="#">安全套</a></li>
+									<li><a href="#">情趣内衣</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T19.VZFophXXczfNfo-80-80.gif"/>
+					    	<span>
+						    	<a href="#">啤酒加油站</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right category_culture">
+						<h4 id="r7" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">用品</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">内饰</a></li>
+									<li><a href="#">外饰</a></li>
+									<li><a href="#">坐垫</a></li>
+									<li><a href="#">座套</a></li>
+									<li><a class="yellow" href="#">香水</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">配件</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">零配件</a></li>
+									<li><a class="yellow" href="#">改装件</a></li>
+									<li><a href="#">轮胎</a></li>
+									<li><a href="#">轮毂</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">摩托车</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">街车</a></li>
+									<li><a href="#">沙滩车</a></li>
+									<li><a href="#">踏板车</a></li>
+									<li><a href="#">卡丁车</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li">
+								<h5><a href="#">汽车</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">新车</a></li>
+									<li><a class="yellow" href="#">二手车</a></li>
+									<li><a href="#">租车</a></li>
+									<li><a href="#">加油卡</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T17aCuFkNfXXb1upjX.jpg"/>
+					    	<span>
+						    	<a href="#">今年流行后视镜行车记录仪</a>
+						    </span>
+					    </div>
+					</li>
+					<li class="category_bd_li_right category_bd_li_bottomRight">
+						<h4 id="r8" class="category_hd"></h4>
+						<ul class="category_bd_content">
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">保洁</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">空调清洗</a></li>
+									<li><a class="yellow" href="#">家庭保洁</a></li>
+									<li><a href="#">钟点保洁</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">家政</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">催乳</a></li>
+									<li><a href="#">月嫂</a></li>
+									<li><a href="#">家电维修</a></li>
+									<li><a href="#">装饰设计</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">生活</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">培训</a></li>
+									<li><a class="yellow" href="#">闲置</a></li>
+									<li><a href="#">母婴</a></li>
+									<li><a href="#">汽车</a></li>
+									<li><a href="#">淘宝招聘</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">外卖</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">KFC</a></li>
+									<li><a href="#">麦当劳</a></li>
+									<li><a href="#">快餐</a></li>
+									<li><a class="yellow" href="#">9.9元</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li category_item_bottom">
+								<h5><a href="#">电影</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">侏罗纪公园</a></li>
+									<li><a href="#">怪兽大学</a></li>
+									<li><a href="#">摩登年代</a></li>
+								</ul>
+							</li>
+							<li class="category_bd_content_li">
+								<h5><a href="#">生活汇</a></h5>
+								<ul class="category_bd_item">
+									<li><a href="#">休闲</a></li>
+									<li><a class="yellow" href="#">美食</a></li>
+									<li><a href="#">摄影</a></li>
+									<li><a href="#">教育</a></li>
+									<li><a href="#">卡券</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="category_pic">
+							<img src="images/T1KQutFXBfXXcKi4fo-80-80.png"/>
+					    	<span>
+						    	<a href="#">手机点外卖，专享9.9</a>
+						    </span>
+					    </div>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		<div id="category_side">
+			<img src="images/T1KAOgFhlaXXb1upjX.jpg">
+			<div id="category_side_hd">
+				<h4><a id="news_hd"href="#">爱淘动态</a></h4>
+				<a id="category_side_news" href="#" ><strong>0</strong> 条最新动态</a>
+			</div>
+			<div id="category_side_bd">
+				<a id="category_side_up" href="#"><i></i></a>
+				<div id="side_bd">
+					<ul id="side_content">
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="hd">
+								<a href="#">
+									<img src="images/ico/T1cryuFXXaXXXXXXXX.JPEG_30x30" />
+									<strong>淘宝天下</strong>
+								</a>
+							</div>
+							<div class="bd">
+								<p class="txt"> 【天下调查社】你喜欢哪种风格的搭配？ 
+									<a href="#">全文</a>  
+								</p>
+								<p class="pic">
+									<a href="#"><img src="images/T1QPaxFhNcXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T17VCwFc4fXXXXXXXX.JPEG_100x100xz" /></a>
+									<a href="#"><img src="images/T1v9ixFflcXXXXXXXX.JPEG_100x100xz" /></a>
+								</p>
+							</div>
+							<div class="ft">
+								<span class="ft_l">10:34</span>
+								<span class="ft_r">
+									<a href="#">转发(4)</a>
+									<i class="pipe">|</i>
+									<a href="#">评论(2)</a>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<a id="category_side_down" href="#"><i></i></a>
+			</div>
+			<img src="images/T1VIPUXohlXXb1upjX.jpg">
+		</div>
+	</div>
+	<div id="local" class="main">
+		<div id="local_hd">
+			<h3><a href="#">我的淘宝生活</a></h3>
+			<div id="local_hd_line"></div>
+			<a id="local_more" class="more">
+  				<span id="local_city">杭州</span>
+ 			</a>
+		</div>
+		<ul id="local_bd"> 
+			<li class="local_bd_item">
+				<h4 id="local_service"><a href="#"></a></h4>
+				<div id="local_creditCard">
+					<img src="images/T1x5HGXn0mXXceR7zk-63-63.jpg">		
+					<h5><a href="#">信用卡还款</a></h5>
+					<ul>
+						<li class="local_creditCard_item">[<a class="yellow" href="#">租车</a>]</li>
+						<li class="local_creditCard_item">[<a href="#">固话</a>]</li>
+						<li class="local_creditCard_item">[<a href="#">交罚款</a>]</li>
+						<li class="local_creditCard_item">[<a href="#">宽带</a>]</li>
+					</ul>
+				</div>
+				<ul id="local_service_pay">
+					<li>
+						<img src="images/T1ajRwXsBbXXXCWhje-36-36.png">
+						<p><a href="#">转账付款</a></p>
+					</li>
+					<li>
+						<img src="images/T1eIqpXjBLXXXXXXXX-63-63.png">
+						<p><a href="#">水电煤缴费</a></p>
+					</li>
+				</ul>	
+			</li>
+			<li class="local_bd_item">
+				<h4 id="local_gourmet"><a href="#"></a></h4>
+				<img src="images/T15yCfFbxgXXbIZMjj-180-70.png"/>
+				<ul id="local_gourmet_ul">
+					<li class="local_gourmet_item">[<a href="#">KFC</a>]</li>
+					<li class="local_gourmet_item">[<a href="#">麦当劳</a>]</li>
+					<li class="local_gourmet_item">[<a class="yellow" href="#">星巴克</a>]</li>
+					<li class="local_gourmet_item">[<a href="#">元祖</a>]</li>
+					<li class="local_gourmet_item">[<a href="#">必胜客</a>]</li>
+					<li class="local_gourmet_item">[<a href="#">外婆家</a>]</li>
+					<li class="local_gourmet_item">[<a href="#">甜品</a>]</li>
+					<li class="local_gourmet_item">[<a class="yellow" href="#">寿司</a>]</li>
+				</ul>
+			</li>
+			<li class="local_bd_item">
+				<h4 id="local_movie"><a href="#"></a></h4>
+				<ul id="local_movie_ul">
+					<li class="local_movie_item">[<a href="#">摩登时代</a>]</li>
+					<li class="local_movie_item">[<a href="#">怪兽大学</a>]</li>
+					<li class="local_movie_item">[<a class="yellow" href="#">激战</a>]</li>
+					<li class="local_movie_item">[<a href="#">侏罗纪公园3D</a>]</li>
+					<li class="local_movie_item">[<a href="#">环太平洋</a>]</li>
+				</ul>
+				<img src="images/T1gRiuFc4gXXbIZMjj-180-70.png"/>
+			</li>
+			<li class="local_bd_item">
+				<h4 id="local_life"><a href="#"></a></h4>
+				<img src="images/T1QuqjFaJfXXbIZMjj-180-70.png"/>
+				<ul id="local_life_ul">
+					<li class="local_life_item">[<a href="#">生活汇</a>]</li>
+					<li class="local_life_item">[<a href="#">水幕电影秒杀</a>]</li>
+					<li class="local_life_item">[<a class="yellow" href="#">蛋糕</a>]</li>
+					<li class="local_life_item">[<a href="#">抢钱33天</a>]</li>
+					<li class="local_life_item">[<a href="#">冰淇淋</a>]</li>
+					<li class="local_life_item">[<a href="#">要嫁人</a>]</li>
+				</ul>
+			</li>
+			<li class="local_bd_item" style="border-right: 0px">
+				<h4 id="local_lifeService"><a href="#"></a></h4>
+				<ul id="local_lifeService_ul">
+					<li class="local_lifeService_item">[<a href="#">淘宝同学</a>]</li>
+					<li class="local_lifeService_item">[<a class="yellow" href="#">直播</a>]</li>
+					<li class="local_lifeService_item">[<a href="#">培训</a>]</li>
+					<li class="local_lifeService_item">[<a href="#">宠物</a>]</li>
+					<li class="local_lifeService_item">[<a href="#">网店模特</a>]</li>
+					<li class="local_lifeService_item">[<a href="#">另类生活</a>]</li>
+					<li class="local_lifeService_item">[<a class="yellow" href="#">跑腿</a>]</li>
+				</ul>
+				<img src="images/T1Rc1yFjBXXXc7WMjj-180-70.jpg"/>
+			</li>
+		</ul>
+	</div>
+	<div id="guide" class="main">
+		<div id="guide_hd">
+			<h3>淘宝带你逛</h3>
+			<ul>
+				<li class="guide_hd_theme"><h5>互动：</h5>	</li>
+				<li><a href="#">随便逛逛</a></li>
+				<li><a href="#">淘女郎</a></li>
+				<li class="guide_hd_theme"><h5>生活窍门：</h5></li>
+				<li><a href="#">女装</a></li>
+				<li><a href="#">美容</a></li>
+				<li><a href="#">家居</a></li>
+				<li><a href="#">美鞋</a></li>
+				<li><a href="#">包包</a></li>
+				<li><a href="#">母婴</a></li>
+				<li><a href="#">男装</a></li>
+				<li class="guide_hd_theme"><h5>主题市场：</h5></li>
+				<li><a href="#">明星开店</a></li>
+				<li><a href="#">值得买</a></li>
+				<li><a href="#">清仓</a></li>
+				<li><a href="#">视频</a></li>
+				<li><a href="#">周边</a></li>
+				<li><a href="#">一城一馆</a></li>
+			</ul>
+		</div>
+		<div id="guide_bd">
+			<div id="guide_bd_left">
+				<ul>
+					<li class="guide_bd_item" id="guide_hot" >
+						<h4><a href="#">逛逛·热门精选</a></h4>
+						<a class="guide_scroll_pic" href="#"><img src="images/T1PnqwFaxcXXbSSnsh-210-210.jpg"/>早秋轻薄针织衫搭！淑女</a>
+						<a class="guide_hot_pic" href="#"><img src="images/T1TOyyFbxbXXbCFbsb-100-100.jpg"/>女星婚纱照大集合</a>
+						<a class="guide_hot_pic" href="#"><img src="images/T18qOwFm4dXXaeHbsb-100-100.png"/>初秋宝宝哈衣 萌！</a>
+						<ul id="guide_hot_item">
+							<li>
+							[<a href="#">裙装</a>]
+							<a href="#">衬衫+连体裤 潮搭</a>
+							</li>
+							<li>[<a href="#">童装</a>]
+								<a href="#">韩星奢华育婴之道</a>
+							</li>
+							<li>[<a href="#">家居</a>]
+								<a href="#">60平loft1室1厅</a>
+							</li>
+							<li>
+								[<a href="#">职场</a>]
+								<a href="#">妈妈：事业pk家庭</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_r" >
+						<h4><a href="#">美容</a><span></span><a href="#">编发</a></h4>
+						<a class="guide_pic_r"><img src="images/T1WfuuFnBfXXaeHbsb-100-100.png"/>他妆后美艳过女人</a>
+						<ul class="guide_item_ul_r">
+							<li class="guide_text_special">
+								<a href="#">4步详细画眼线</a>
+								<a href="#">刘海助你变女神</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[彩妆]</a>
+								<a href="#" class="guide_text_middle">实用！画眉教学</a>
+								<a href="#">电眼美睫百搭妆</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[扎发]</a>
+								<a href="#" class="guide_text_middle">公主头半扎发</a>
+								<a href="#">时尚复古蝎子辫</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[护肤]</a>
+								<a href="#" class="guide_text_middle">去黑头清扫毛孔</a>
+								<a href="#">28天改造暗沉</a>
+							</li>	
+							<li>
+								<a class="guide_text_title yellow" href="#">[画眉毛]</a>
+								<a class="guide_text_title" href="#">[画眼线]</a>
+								<a class="guide_text_title" href="#">[减龄妆]</a>
+								<a class="guide_text_title" href="#">[花苞头]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_r" >
+						<h4><a href="#">八卦</a><span></span><a href="#">情感</a></h4>
+						<a class="guide_pic_r" href="#"><img src="images/T1qbefFdhhXXaeHbsb-100-100.png"/>允儿俏皮表情</a>
+						<ul class="guide_item_ul_r">
+							<li class="guide_text_special">
+								<a href="#">王祖贤欲嫁20岁男友</a>
+								<a href="#">郭晶晶生6斤男婴</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[八卦]</a>
+								<a href="#" class="guide_text_middle">沈佳宜演小龙女</a>
+								<a href="#">人人都爱马卡龙</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[话题]</a>
+								<a href="#" class="guide_text_middle">闺蜜出卖星座女</a>
+								<a href="#">刘诗诗刘亦菲pk</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[时尚]</a>
+								<a href="#" class="guide_text_middle">高端奢侈品</a>
+								<a href="#">时尚女王范冰冰</a>
+							</li>	
+							<li>
+								<a class="guide_text_title" href="#">[微博]</a>
+								<a class="guide_text_title" href="#">[马卡龙]</a>
+								<a class="guide_text_title" href="#">[综艺节目]</a>
+								<a class="guide_text_title yellow" href="#">[古装]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_l">
+						<h4><a href="#">淘女郎</a><span></span><a href="#">搭配购</a></h4>
+						<a class="guide_pic_l" href="#"><img src="images/T1ZQivFkBeXXaeHbsb-100-100.png"/>开学季学妹抢眼搭</a>
+						<ul class="guide_item_ul_l">
+							<li class="guide_text_special_l">
+								<a href="#">白富美都爱这么穿</a>
+								<a href="#">针织外套+碎花裙</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[韩系]</a>
+								<a href="#" class="guide_text_middle_l">初秋美搭指南</a>
+								<a href="#">晒图就去丽江</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[保湿]</a>
+								<a href="#" class="guide_text_middle_l">名媛气质68搭</a>
+								<a href="#">早秋复古穿搭</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[单鞋]</a>
+								<a href="#" class="guide_text_middle_l">气场秋款外套</a>
+								<a href="#">矮妹显高54搭</a>
+							</li>	
+							<li>
+								<a class="guide_text_title" href="#">[牛仔]</a>
+								<a class="guide_text_title" href="#">[云南行]</a>
+								<a class="guide_text_title yellow" href="#">[小清新]</a>
+								<a class="guide_text_title" href="#">[秋上新]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_r">
+						<h4><a href="#">值得买</a><span></span><a href="#">折扣</a></h4>
+						<a class="guide_pic_r" href="#"><img src="images/T15e5yFgRaXXbCFbsb-100-100.jpg"/>美！大嘴猴四件套</a>
+						<ul class="guide_item_ul_r">
+							<li class="guide_text_special">
+								<a href="#">哈伦裤+潮T 超显瘦</a>
+								<a href="#">学韩国MM就这么穿</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[扎发]</a>
+								<a href="#" class="guide_text_middle">防小三专用手机</a>
+								<a href="#">穿裙子要悲剧了</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[热卖]</a>
+								<a href="#" class="guide_text_middle">惊！用鸟粪敷脸</a>
+								<a href="#">睫毛膏干了别扔</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[包包]</a>
+								<a href="#" class="guide_text_middle">小公主旗袍59元</a>
+								<a href="#">家里有个小萝莉</a>
+							</li>	
+							<li>
+								<a class="guide_text_title" href="#">[白菜价]</a>
+								<a class="guide_text_title" href="#">[神店铺]</a>
+								<a class="guide_text_title" href="#">[教搭配]</a>
+								<a class="guide_text_title yellow" href="#">[奇葩物]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_l">
+						<h4><a href="#">逛逛</a><span></span><a href="#">居家生活</a></h4>
+						<a class="guide_pic_l" href="#"><img src="images/T1M4WxFhJbXXaeHbsb-100-100.png"/>萌货靠垫！爱死</a>
+						<ul class="guide_item_ul_l">
+							<li class="guide_text_special_l">
+								<a href="#">1000款榻榻米！</a>
+								<a href="#">110平美式小3居</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[风格]</a>
+								<a href="#" class="guide_text_middle_l">320平超大5房</a>
+								<a href="#">33平简约1室</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[家装]</a>
+								<a href="#" class="guide_text_middle_l">72平2室+健身</a>
+								<a href="#">4万装50平1居</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[蜗居]</a>
+								<a href="#" class="guide_text_middle_l">这才叫地中海</a>
+								<a href="#">89平装百平效</a>
+							</li>	
+							<li>
+								<a class="guide_text_title" href="#">[小户型]</a>
+								<a class="guide_text_title yellow" href="#">[老房改造]</a>
+								<a class="guide_text_title" href="#">[穷游]</a>
+								<a class="guide_text_title" href="#">[云南]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_r">
+								<h4><a href="#">天天特价</a><span></span><a href="#">包邮</a></h4>
+								<a class="guide_pic_r" href="#"><img src="images/T14iGxFclbXXaCwpjX.png"/>创意无限 巧收纳</a>
+								<ul class="guide_item_ul_r">
+									<li class="guide_text_special">
+										<a href="#">千款1元货 每小时抢</a>
+										<a href="#">天天9.9元 包邮！</a>
+									</li>
+									<li class="guide_text">
+										<a class="guide_text_title" href="#">[雪纺]</a>
+										<a href="#" class="guide_text_middle">T恤+仔裤 潮搭</a>
+										<a href="#">塑身美体妙招</a>
+									</li>
+									<li class="guide_text">
+										<a class="guide_text_title" href="#">[潮鞋]</a>
+										<a href="#" class="guide_text_middle">潮包TOP100</a>
+										<a href="#">Polo衫+仔裤</a>
+									</li>
+									<li class="guide_text">
+										<a class="guide_text_title" href="#">[母婴]</a>
+										<a href="#" class="guide_text_middle">高温天防晒补水</a>
+										<a href="#">新奇创意家居</a>
+									</li>	
+									<li>
+										<a class="guide_text_title yellow" href="#">[零食]</a>
+										<a class="guide_text_title" href="#">[iPhone]</a>
+										<a class="guide_text_title" href="#">[爱车]</a>
+										<a class="guide_text_title" href="#">[品牌区]</a>
+									</li>
+								</ul>
+							</li>
+					<li class="guide_bd_item guide_bd_item_l">
+						<h4><a href="#">逛逛</a><span></span><a href="#">服饰潮搭</a></h4>
+						<a class="guide_pic_l" href="#"><img src="images/T1pbixFhJaXXbCFbsb-100-100.jpg"/>显瘦西装小外套</a>
+						<a class="guide_special_pic" href="#"><img src="images/T1Fy5gFedfXXatLcA3-100-80.jpg"/>
+								 早秋百搭上装</a>
+						<a class="guide_special_pic" href="#"><img src="images/T1QDChFohgXXc8MZA3-100-80.png"/>最讨厌的男生装束</a>
+						<ul class="guide_item_ul_special">
+							<li>
+								<a class="guide_text_title" href="#">[秋装]</a>
+								<a class="guide_text_title" href="#">[连衣裙]</a>
+								<a class="guide_text_title" href="#">[韩版]</a>
+								<a class="guide_text_title yellow" href="#">[9块9]</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_bd_item guide_bd_item_r">
+						<h4><a href="#">逛逛</a><span></span><a href="#">鞋包配饰</a></h4>
+						<a class="guide_pic_r" href="#"><img src="images/T1u0quFX0fXXbCFbsb-100-100.jpg"/>名媛风甜美尖头鞋</a>
+						<ul class="guide_item_ul_r">
+							<li class="guide_text_special">
+								<a href="#">美新娘吸睛发饰</a>
+								<a href="#">街拍范复古皮包</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[美鞋]</a>
+								<a href="#" class="guide_text_middle">涂鸦铆钉帆布鞋</a>
+								<a href="#">性感约会鱼嘴鞋</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[包包]</a>
+								<a href="#" class="guide_text_middle">开学必备双肩包</a>
+								<a href="#">大牌范儿两用包</a>
+							</li>
+							<li class="guide_text">
+								<a class="guide_text_title" href="#">[配饰]</a>
+								<a href="#" class="guide_text_middle">马卡龙色小雏菊</a>
+								<a href="#">蕾丝复古手链</a>
+							</li>	
+							<li>
+								<a class="guide_text_title" href="#">[手链]</a>
+								<a class="guide_text_title yellow" href="#">[鱼嘴鞋]</a>
+								<a class="guide_text_title" href="#">[凉拖]</a>
+								<a class="guide_text_title" href="#">[耳饰]</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="guide_bd_right">
+				<ul>
+					<li class="guide_side">
+						<h4>明星<a href="#">Roger老师大改造 素人变身</a></h4>
+						<ul>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1g7KxFl8eXXX9hhfo-80-80.jpg"/>
+								女装劲爆1折</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1tz1AFa0aXXX9hhfo-80-80.jpg"/>
+								开学形象改造</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1WQGvFaXgXXX9hhfo-80-80.jpg"/>
+								黄圣依发专辑</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_side">
+						<h4>清仓<a href="#">夏末大甩卖，清仓1折起抛！</a></h4>
+						<ul>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T12MyxFgheXXaCwpjX.png"/>
+								最争议小龙女</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1KceyFdNdXXcKi4fo-80-80.png"/>
+								包包1折起抛</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1Ic1rFkdaXXX9hhfo-80-80.jpg"/>
+								手机免费试用</a>
+							</li>
+						</ul>
+					</li>
+					<li class="guide_side_try">
+						<h4>试用<a href="#">大牌云集，等你免费来试</a></h4>
+						<ul>
+							<li class="guide_side_show_try">
+								<a href="#"><img src="images/T10dGyFl0cXXX9hhfo-80-80.jpg"/>
+								韩版女装领取</a>
+							</li>
+							<li class="guide_side_show_try">
+								<a href="#"><img src="images/T1l4SzFkRXXXX9hhfo-80-80.jpg"/>
+								免费拿走</a>
+							</li>
+							<li class="guide_side_show_try">
+								<a href="#"><img src="images/T1djGxFbpcXXX9hhfo-80-80.jpg"/>
+								糖果女包0元</a>
+							</li>
+						</ul>
+						<div class="right-try-button">
+							<a href="#">10元尝新</a>
+							<a href="#">免费拿走</a>
+							<a href="#">免费领5件</a>
+						</div>
+					</li>
+					<li class="guide_side">
+						<h4>逛逛·趣味活动</h4>
+						<ul>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1ziOhFnVgXXcKi4fo-80-80.png"/>
+								<span>科技发达</span>稻草人也进化</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1jyWzFexaXXcKi4fo-80-80.png"/>
+								<span>森林系</span>森林色我的爱</a>
+							</li>
+							<li class="guide_side_show">
+								<a href="#"><img src="images/T1rmmwFftdXXcKi4fo-80-80.png"/>
+								<span>呆萌宝贝</span>美女，来亲亲</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="hotSale" class="main">
+		<div id="hotSale_hd">
+			<h3>热卖单品</h3>
+			<ul>
+				<li><a href="#">2013秋装</a></li>
+				<li><a href="#">连衣裙</a></li>
+				<li><a href="#">摇摆机</a></li>
+				<li><a href="#">龙纹鲤</a></li>
+				<li><a href="#">环保漆</a></li>
+				<li><a href="#">台锯</a></li>
+				<li><a href="#">高腰裤</a></li>
+				<li><a href="#">遮阳伞</a></li>
+				<li><a href="#">客厅灯</a></li>
+				<li><a href="#">男牛仔</a></li>
+				<li><a href="#">水晶灯</a></li>
+				<li><a href="#">打底裙</a></li>
+				<li><a href="#">牛仔</a></li>
+				<li><a href="#">月饼</a></li>
+				<li><a href="#">座垫</a></li>
+				<li><a href="#">文胸</a></li>
+			</ul>
+			<a id="hotSale_hd_more">更多</a>
+		</div>
+		<ul id="hotSale_bd">
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1cBVaXslhXXXXXXXX_!!0-item_pic.jpg_120x120.jpg">孕产妇叶酸多维营养素</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>98.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>73.50</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>2710</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2lnjcXgVbXXXXXXXX_!!849723430.jpg_120x120.jpg">热卖万件全自动机械表</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>1330.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>399.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count">月销<a>880</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1JBTAXfFmXXcVMbfX_114310.jpg_120x120.jpg">买2送3！洗掉鸡皮肤</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>298.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>168.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>377</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2z3e0XiRbXXXXXXXX_!!776645529.jpg_120x120.jpg">哺乳文胸 孕妇内衣</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>30.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>15.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>25765</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2pi0pXj0OXXXXXXXX_!!1075334635.jpg_120x120.jpg">100%纯棉睡衣女夏</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>178.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>75.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>231</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1IsmpFaNeXXXXXXXX_!!0-item_pic.jpg_120x120.jpg">36全国包邮！磨毛衬衫</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>179.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>39.50</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>30469</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1p_ubFgVaXXXXXXXX_!!0-item_pic.jpg_120x120.jpg">奢华手包 给足面子</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>98.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>73.50</strong>
+					</span>
+				</p>
+				<p class="hotsale_count">月销<a>2710件</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2wnchXalbXXXXXXXX_!!705133943.jpg_120x120.jpg">包邮！亚麻长袖衬衫</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>216.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>108.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>796</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2EHgjXf0aXXXXXXXX_!!1069926213.jpg_120x120.jpg">11000毫安手机充电宝</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>239.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>109.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count">月销<a>35</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1gMH1XbdnXXXCexc6_062027.jpg_120x120.jpg">高效果 高品质</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>98.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>73.50</strong>
+					</span>
+				</p>
+				<p class="hotsale_count">月销<a>2710件</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T2O5Z6XihXXXXXXXXX_!!730550984.jpg_120x120.jpg">超细颗粒反绒男鞋!</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>338.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>139.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>64</a></p>
+			</li>
+			<li>
+				<a class="hotSale_bd_title" href="#"><img src="images/T1DOJvFb0fXXXXXXXX_!!0-item_pic.jpg_120x120.jpg">金骏眉 高档礼盒</a>
+				<p class="hotSale_price">
+					<span class="hotSale_price_del">
+						<span>¥</span>
+						<strong>568.00</strong>
+					</span>
+					<span class="hotSale_price_yellow">
+						<span>¥</span>
+						<strong>99.00</strong>
+					</span>
+				</p>
+				<p class="hotsale_count"><i></i>月销<a>2377</a></p>
+			</li>
+		</ul>
+	</div>
+	<div id="banner" class="main">
+		<a href="#"><img src="images/T1GUJTFnxhXXb1upjX.jpg"/></a>
+		<a href="#"><img src="images/T18y4yFdldXXb1upjX.jpg"/></a>
+	</div>
+	<div id="foot" class="main">
+		<ul id="foot_help">
+			<li>
+				<h2 id="consumer"></h2>
+				<a href=#"">保障范围</a>
+				<a href=#"">退货退款流程</a>
+				<a href=#"">我要发起维权</a>
+				<a href=#"">更多特色服务</a>
+				<a href=#"">服务中心</a>
+			</li>
+			<li>
+				<h2 id="novice"></h2>
+				<a href=#"">新手专区</a>
+				<a href=#"">交易安全</a>
+				<a href=#"">消费警示</a>
+				<a href=#"">新手注册</a>
+				<a href=#"">新手学堂</a>
+				<a href=#"">24小时在线帮助</a>
+			</li>			
+			<li id="foot_help_pic">
+				<i></i>
+			</li>
+			<li>
+				<h2 id="pay"></h2>
+				<a href=#"">支付宝快捷支付</a>
+				<a href=#"">支付宝余额付款</a>
+				<a href=#"">支付宝卡（现金）付款</a>
+				<a href=#"">货到付款</a>
+				<a href=#"">新人支付</a>
+			</li>
+			<li>
+				<h2 id="feature"></h2>
+				<a href=#"">淘公仔</a>
+				<a href=#"">手机淘宝</a>
+				<a href=#"">淘宝指数</a>
+				<a href=#"">旺信</a>
+			</li>
+		</ul>
+		<div id="footer">
+			<ul id="footer_ali">
+				<li>
+					<a href="#">阿里巴巴集团</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">阿里巴巴国际站</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">阿里巴巴中国站</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">全球速卖通</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">天猫</a>
+					<i>|</i>
+				<li>
+				<li>
+					<a href="#">聚划算</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">一淘</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">阿里妈妈</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">阿里云计算</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">云OS</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">万网</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">中国雅虎</a>
+					<i>|</i>
+				</li>
+				<li>
+					<a href="#">支付宝</a>
+				</li>
+			</ul>
+			<ul id="footer_nav">
+				<li>
+					<a href="#">关于淘宝</a>
+				</li>
+				<li>
+					<a href="#">合作伙伴</a>
+				</li>
+				<li>
+					<a href="#">营销中心</a>
+				</li>
+				<li>
+					<a href="#">联系客服</a>
+				</li>
+				<li>
+					<a href="#">开放平台</a>
+				</li>
+				<li>
+					<a href="#">诚征英才</a>
+				</li>
+				<li>
+					<a href="#">联系我们</a>
+				</li>
+				<li>
+					<a href="#">网站地图</a>
+				</li>
+				<li>
+					<a href="#">法律声明</a>
+				</li>
+				<li id="Copyright">
+					<a>© 2013 Taobao.com 版权所有</a>
+				</li>
+				<li id="footer_line"></li> 
+				<li id="footer_toy"></li>
+			</ul>
+			<div id="footer_copyright">
+	            <span>网络文化经营许可证：<a href="#">文网文[2010]040号</a></span>
+	            <i>|</i>
+	            <span>增值电信业务经营许可证：浙B2-20080224-1</span>
+	            <i>|</i>
+	            <span>信息网络传播视听节目许可证：1109364号</span> 
+        	</div>
+        	<div id="footer_ext">
+        		<a id="footer_ext_1"></a>
+        		<a id="footer_ext_2"></a>
+        		<a id="footer_ext_3"></a>
+        		<a id="footer_ext_4"></a>
+        		<a id="footer_ext_5"></a>
+        		<a id="footer_ext_6"></a>
+        	</div>
+		</div>
+	</div>
+</body>
+</html>
